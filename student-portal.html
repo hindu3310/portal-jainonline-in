@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jain University - Student Portal</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tab-active { 
+      border-bottom-width: 2px; 
+      border-color: rgb(59 130 246); /* tailwind blue-500 */
+      color: rgb(59 130 246);
+      font-weight: 600;
+    }
+    .card { box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1); }
+    .rounded-2xl { border-radius: 1rem; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div class="max-w-5xl mx-auto p-6 space-y-6">
+    <header>
+      <h1 class="text-3xl font-bold">Jain University Student Portal</h1>
+ 
+    </header>
+
+    <!-- Personal Information -->
+    <section class="card bg-white rounded-2xl">
+      <div class="p-5">
+        <h2 class="text-xl font-semibold mb-3">Personal Information</h2>
+        <div class="grid md:grid-cols-2 gap-2 text-sm">
+          <p><b>Name:</b> Deepak</p>
+          <p><b>Father's Name:</b> Babu Lal</p>
+          <p><b>Mother's Name:</b> Suman Devi</p>
+           <p><b>University Roll no:</b> 202408MCS02</p>
+           <p><b>Universiy Gmail:</b> deepak-cs@jainuniversity.ac.in</p>
+           <p><b>Course Enrolled:</b> M.tech Cyber Security</p>
+          <p><b>Aadhar:</b> 5930-XXXX-2549</p>
+          <p class="md:col-span-2"><b>Permanent Address:</b> Ward No 15 Azad Nagar Samalkha Panipat Haryana 132101</p>
+          <p class="md:col-span-2"><b>Correspondence Address:</b> 6th Cross SG Palya Bengaluru karnataka - 560029</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Details with Tabs -->
+    <section class="card bg-white rounded-2xl">
+      <div class="p-5">
+        <h2 class="text-xl font-semibold mb-3">Academic Details</h2>
+
+        <!-- Tabs header -->
+        <div id="tabs" class="flex flex-wrap gap-2 border-b">
+          <button data-tab="sem1" class="px-4 py-2 -mb-px border-b-2 border-transparent">Semester 1</button>
+          <button data-tab="sem2" class="px-4 py-2 -mb-px border-b-2 border-transparent">Semester 2</button>
+          <button data-tab="sem3" class="px-4 py-2 -mb-px border-b-2 border-transparent">Semester 3</button>
+          <button data-tab="sem4" class="px-4 py-2 -mb-px border-b-2 border-transparent">Semester 4</button>
+          <button data-tab="assignments" class="ml-auto px-4 py-2 -mb-px border-b-2 border-transparent">Assignments</button>
+          <button data-tab="exams" class="px-4 py-2 -mb-px border-b-2 border-transparent">Upcoming Exams</button>
+        </div>
+
+        <!-- Tab contents -->
+        <div id="tab-contents" class="mt-4 space-y-1">
+          <!-- Semester 1 -->
+          <div data-content="sem1" class="hidden">
+            <h3 class="font-bold mb-2">Fee Details</h3>
+            <div class="grid grid-cols-2 gap-2 text-sm border-b py-2">
+              <p><b>Date:</b> 2024-Aug</p>
+              <p><b>Txn ID:</b> 583920174625</p>
+              <p><b>Amount:</b> ₹53,943</p>
+              <p><b>Paid By:</b> UPI</p> 
+             
+              <p><b>Date:</b> 2024-Sep-05</p>
+              <p><b>Txn ID:</b> 794215806932</p>
+              <p><b>Amount:</b> ₹28,943</p>
+              <p><b>Paid By:</b> Auto Debit</p>
+              
+              <p><b>Date:</b> 2024-Oct-05</p>
+              <p><b>Txn ID:</b> 162458739014</p>
+              <p><b>Amount:</b> ₹28,943</p>
+              <p><b>Paid By:</b> Auto Debit</p>
+            
+              <p><b>Date:</b> 2024-Nov-05</p>
+              <p><b>Txn ID:</b> 162458739014</p>
+              <p><b>Amount:</b> ₹28,943</p>
+              <p><b>Paid By:</b> Auto Debit</p>
+            </div>
+
+            <h3 class="font-bold mt-4 mb-2">Result</h3>
+            <p><b>SGPA:</b> 7.2</p>
+            <p><b>CGPA:</b> 7.2</p>
+            <p><b>Total:</b> 10</p>
+            <p><b>Remarks:</b> Good</p>
+          </div>
+
+          <!-- Semester 2 -->
+          <div data-content="sem2" class="hidden">
+            <h3 class="font-bold mb-2">Fee Details</h3>
+            <div class="grid grid-cols-2 gap-2 text-sm border-b py-2">
+              <p><b>Date:</b> 2024-Dec-05</p>
+              <p><b>Txn ID:</b> 239847561082</p>
+              <p><b>Amount:</b> ₹28,943</p>
+              <p><b>Paid By:</b> Auto Debit</p>
+
+              <p><b>Date:</b> 2025-Jan-05</p>
+              <p><b>Txn ID:</b> 671452908317</p>
+              <p><b>Amount:</b> ₹28,943</p>
+              <p><b>Paid By:</b> Atuo Debit</p>
+
+              <p><b>Date:</b> 2023-Feb-05</p>
+              <p><b>Txn ID:</b> 950172684530</p>
+              <p><b>Amount:</b> ₹57,886</p>
+              <p><b>Paid By:</b> Auto Debit</p>
+            </div>
+
+            <h3 class="font-bold mt-4 mb-2">Result</h3>
+            <p><b>SGPA:</b> 6.9</p>
+            <p><b>CGPA:</b> 6.9</p>
+            <p><b>Total:</b> 10</p>
+            <p><b>Remarks:</b> Very Good</p>
+          </div>
+
+          <!-- Semester 3 -->
+          <div data-content="sem3" class="hidden">
+            <h3 class="font-bold mb-2">Fee Details</h3>
+            <div class="grid grid-cols-2 gap-2 text-sm border-b py-2">
+              <p><b>Date:</b> 2025-Feb-05</p>
+              <p><b>Txn ID:</b> 418596203745</p>
+              <p><b>Amount:</b> ₹1,18,000</p>
+              <p><b>Paid By:</b> Net Banking</p>
+            </div>
+          </div>
+
+          <!-- Semester 4 -->
+          <div data-content="sem4" class="hidden">
+            <h3 class="font-bold mb-2">Fee Details</h3>
+            <div class="grid grid-cols-2 gap-2 text-sm border-b py-2">
+              <p><b>Date:</b> 2025-Feb-05</p>
+              <p><b>Txn ID:</b> 987543203745</p>
+              <p><b>Amount:</b> ₹1,17,000</p>
+              <p><b>Paid By:</b> Net Banking</p>
+            </div>
+          </div>
+
+          <!-- Assignments -->
+          <div data-content="assignments" class="hidden">
+            <h3 class="font-bold mb-2">Assignments</h3>
+            <div class="grid grid-cols-3 gap-2 text-sm border-b py-2">
+              <p><b>Subject:</b> Database Systems</p>
+              <p><b>Due Date:</b> 2025-09-15</p>
+              <p><b>Status:</b> Pending</p>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-sm border-b py-2">
+              <p><b>Subject:</b> Computer Networks</p>
+              <p><b>Due Date:</b> 2025-09-20</p>
+              <p><b>Status:</b> Submitted</p>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-sm border-b py-2">
+              <p><b>Subject:</b> Operating Systems</p>
+              <p><b>Due Date:</b> 2025-09-25</p>
+              <p><b>Status:</b> Pending</p>
+            </div>
+          </div>
+
+          <!-- Exams -->
+          <div data-content="exams" class="hidden">
+            <h3 class="font-bold mb-2">Upcoming Exam Schedule</h3>
+            <div class="grid grid-cols-3 gap-2 text-sm border-b py-2">
+              <p><b>Subject:</b> Data Structures</p>
+              <p><b>Date:</b> 2025-12-05</p>
+              <p><b>Time:</b> 10:00 AM</p>
+              <p><b>Mode:</b> Online</p>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-sm border-b py-2">
+              <p><b>Subject:</b> Database Systems</p>
+              <p><b>Date:</b> 2025-12-08</p>
+              <p><b>Time:</b> 2:00 PM</p>
+              <p><b>Mode:</b> Online</p>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-sm border-b py-2">
+              <p><b>Subject:</b> Computer Networks</p>
+              <p><b>Date:</b> 2025-12-12</p>
+              <p><b>Time:</b> 10:00 AM</p>
+              <p><b>Mode:</b> Online</p>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-sm border-b py-2">
+              <p><b>Subject:</b> Operating Systems</p>
+              <p><b>Date:</b> 2025-12-19</p>
+              <p><b>Time:</b> 10:00 AM</p>
+              <p><b>Mode:</b> Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    
+  </div>
+
+  <script>
+    // Simple tabs implementation
+    const tabButtons = document.querySelectorAll('#tabs [data-tab]');
+    const tabContents = document.querySelectorAll('#tab-contents [data-content]');
+
+    function activateTab(name) {
+      tabButtons.forEach(btn => {
+        if (btn.getAttribute('data-tab') === name) {
+          btn.classList.add('tab-active');
+        } else {
+          btn.classList.remove('tab-active');
+        }
+      });
+      tabContents.forEach(c => {
+        c.classList.toggle('hidden', c.getAttribute('data-content') !== name);
+      });
+      // Optional: scroll to content on mobile
+      document.querySelector('#tab-contents')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Default active tab
+    activateTab('sem1');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => activateTab(btn.getAttribute('data-tab')));
+    });
+  </script>
+</body>
+</html>
